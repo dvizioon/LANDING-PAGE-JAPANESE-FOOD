@@ -21,7 +21,7 @@ Bem-vindo ao projeto da Landing Page de Comida Japonesa! Esta página é dedicad
 
 Esta landing page apresenta um atraente layout com um botão para navegar e explorar a comida japonesa.
 
-<img src="./assets/screenshots/05.jpg" />
+
 <img src="./assets/screenshots/02.png" />
 <img src="./assets/screenshots/03.png" />
 
