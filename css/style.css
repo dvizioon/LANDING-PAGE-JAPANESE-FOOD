@@ -1,0 +1,337 @@
+@import url(../font/font.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-landing: rgb(0, 0, 0);
+    --text-h1-h6: red;
+    --text-generic: white;
+    --buttons-color: #FF5563;
+    --background-generic: white;
+    --font-generic: "Spectral", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-landing);
+}
+
+#bg-imagem {
+    width: 100%;
+    position: absolute;
+    background: url(../assets/landing_Background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    inset: 0;
+    opacity: 0.3;
+    height: 100%;
+    z-index: -1;
+}
+
+section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: var(--text-generic);
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 2.5;
+    font-family: "Beth Ellen";
+    width: 100%;
+}
+h2 {
+    font-size: 2rem;
+    line-height: 2.5;
+    font-family: "Beth Ellen";
+    width: 100%;
+}
+
+h1 span {
+    color: var(--text-h1-h6);
+    width: 100%;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 5rem;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-generic);
+    padding: 1rem 2rem;
+    background-color: var(--buttons-color);
+    transition: all 300ms;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-family: var(--font-generic);
+    font-weight: 300;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s forwards;
+}
+
+a:hover {
+    background-color: #f87580;
+    transform: scale(106%);
+    gap: 1.2rem;
+}
+
+h1,
+p,
+a {
+    animation: appear 1s;
+    -webkit-animation: appear 1s backwards;
+}
+
+/* Animações */
+h1 {
+    animation-delay: 0.2s;
+}
+
+p {
+    animation-delay: 0.8s;
+}
+
+a:nth-of-type(1) {
+    cursor: pointer;
+    animation-delay: 1.6s;
+}
+
+a:nth-of-type(2) {
+    cursor: pointer;
+    animation-delay: 2.3s;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsivo */
+@media (width < 40rem) {
+    html {
+        font-size: 70%;
+    }
+}
+
+.ribbon {
+    font-size: 28px;
+    color: var(--text-h1-h6);
+    font-family: var(--font-generic);
+    font-weight: 300;
+}
+
+.ribbon {
+    --f: .5em;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    line-height: 1.8;
+    padding-inline: 1lh;
+    padding-bottom: var(--f);
+    border-image: conic-gradient(#0008 0 0) 51%/var(--f);
+    clip-path: polygon(100% calc(100% - var(--f)), 100% 100%, calc(100% - var(--f)) calc(100% - var(--f)), var(--f) calc(100% - var(--f)), 0 100%, 0 calc(100% - var(--f)), 999px calc(100% - var(--f) - 999px), calc(100% - 999px) calc(100% - var(--f) - 999px));
+    transform: translate(calc((1 - cos(45deg))*100%), -100%) rotate(45deg);
+    transform-origin: 0% 100%;
+    background-color: var(--background-generic);
+}
+
+/* From https://css.glass */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.chat-content {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding: 1rem;
+}
+
+.food-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.food-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.food-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #FF0000 #FFFFFF;
+}*/
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #ffffff00;
+}
+
+*::-webkit-scrollbar-track:hover {
+    background-color: #ffffff00;
+}
+
+*::-webkit-scrollbar-track:active {
+    background-color: #ffffff00;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #FF0000;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #E50000;
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: #E50000;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1.1rem;
+    color: var(--text-h1-h6);
+}
+
+input,
+select,
+button {
+    padding: 10px;
+    border: 1px solid var(--modal-border);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--buttons-color);
+    color: var(--text-generic);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e63946;
+}
+
+input:focus,
+select:focus,
+button:focus {
+    outline: none;
+    border-color: var(--text-h1-h6);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <meta name="description" content="Japanese Food">
+    <title>Japanese Food</title>
+  
+</head>
+
+<body>
+    <section>
+        <div class="ribbon">&copy; Dvizioon</div>
+
+        <img src="./assets/landing_Background.jpg" alt="img-fundo" id="bg-imagem">
+
+        <h1>Japanese <span>Food</span></h1>
+        <p>Os melhores Sabores de Comida Japonesa a <br> um clique de Distância</p>
+
+        <a id="openModal">
+            Uma Previa do Cardapio <span class="material-symbols-outlined">
+                restaurant_menu
+            </span> 
+        </a>
+
+        <a id="openContact">
+            Quero meu pedido agora <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div style="width: 100%;display: inline-flex;justify-content:space-center;gap:1rem; align-items: center; ">
+                <h2>Menu de Comida Japonesa</h2>
+                <span class="close material-symbols-outlined">
+                    cancel
+                </span>
+            </div>
+            <div class="chat-content">
+                <div class="food-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJGrA4bUu7H1Cq_c-3hdrQ-1AJDrN06_wPAw&s" alt="Sushi">
+                    <h3>Sushi</h3>
+                </div>
+                <div class="food-card">
+                    <img src="https://cdn.casaeculinaria.com/wp-content/uploads/2023/11/08104850/Ramen.webp" alt="Ramen">
+                    <h3>Ramen</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalContact" class="modal">
+        <div class="modal-content glass">
+            <div style="width: 100%;display: inline-flex;justify-content:space-center;gap:1rem; align-items: center; ">
+                <h2>Faça seu pedido</h2>
+                <span class="close material-symbols-outlined">
+                    cancel
+                </span>
+            </div>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="food">Prato:</label>
+                <select id="food" name="food">
+                    <option value="">Pratos Opcionais</option>
+                    <option value="sushi">Sushi</option>
+                    <option value="rame">Rame</option>
+                </select>
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+
+</html>
