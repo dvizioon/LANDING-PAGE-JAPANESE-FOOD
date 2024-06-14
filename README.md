@@ -2,6 +2,10 @@
 
 <img src="./assets/screenshots/01.png" alt />
 
+![HTML](https://img.shields.io/badge/HTML-5-orange?style=flat-square&logo=html5)
+![CSS](https://img.shields.io/badge/CSS-3-blue?style=flat-square&logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?style=flat-square&logo=javascript)
+
 Bem-vindo ao projeto da Landing Page de Comida Japonesa! Esta página é dedicada aos amantes da culinária japonesa, oferecendo uma experiência visual incrível e informações deliciosas sobre a gastronomia do Japão.
 
 ## 🌸 Índice
