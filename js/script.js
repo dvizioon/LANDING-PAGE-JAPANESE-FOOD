@@ -37,6 +37,10 @@ form.addEventListener("submit", function (event) {
     // console.log("Nome:", name);
     // console.log("Comida:", food);
 
+    if (nome === "") {
+        alert("Nome Vazio...")
+    }
+
  
     var whatsappLink = "https://wa.me/+13656593870?text=" + encodeURIComponent(`Nome:${name}${food?",Comida: "+food:""}`);
 

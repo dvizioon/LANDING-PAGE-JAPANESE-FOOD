@@ -78,7 +78,7 @@ a {
     border-radius: 0.5rem;
     font-size: 1.2rem;
     font-family: var(--font-generic);
-    font-weight: 300;
+    font-weight: 500;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -149,7 +149,7 @@ a:nth-of-type(2) {
     font-size: 28px;
     color: var(--text-h1-h6);
     font-family: var(--font-generic);
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .ribbon {
@@ -305,8 +305,13 @@ form {
 }
 
 label {
-    font-size: 1.1rem;
-    color: var(--text-h1-h6);
+    font-size:1.2rem;
+        color: var(--text-h1-h6);
+        font-family: var(--font-generic);
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
 }
 
 input,
