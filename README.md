@@ -8,6 +8,10 @@
 
 Bem-vindo ao projeto da Landing Page de Comida Japonesa! Esta página é dedicada aos amantes da culinária japonesa, oferecendo uma experiência visual incrível e informações deliciosas sobre a gastronomia do Japão.
 
+<img src="./assets/screenshots/05.png" alt />
+
+## [Vizualizar o Prototipo](https://www.figma.com/design/oOuVrO9yKIUB66vjKdTPLh/Japanese-food-dvizioon?node-id=3-376&t=74qGPElrGdxTrFLf-1) 👈
+
 ## 🌸 Índice
 
 - [Descrição](#descrição)
